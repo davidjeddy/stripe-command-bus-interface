@@ -15,11 +15,7 @@ run `composer install`.
 # basic command bus invocation
 $response = \Yii::$app->commandBus->handle(
     # the Stripe Command Bus core class. All requests pass through this class.
-    new \dje\StripeCB\Core([
-        # the object the command is for. Customer, Charge, Payment, Transation, etc.
-        'noun' => 'customer',
-        # the action taking place. Typeically view, update, delete, append, etc.
-        'verb' => 'create',
+    new \dje\StripeCB\Customer\Create([
         # the Stripe data is passed to the command bus handlers as the `data` property
         'data' => [
             'description'   => $companyMDL->name,

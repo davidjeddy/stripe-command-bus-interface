@@ -16,9 +16,15 @@ class Create extends Core
     public function init()
     {
         parent::init();
+
+        // sane defaults
+        if (!isset($this->data['source']['object'])) {
+            $this->data['source']['object'] = 'card';
+        }
     }
 
     /**
+     * @param $command
      * @return \Stripe\Customer
      * @throws \Exception
      */

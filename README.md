@@ -5,9 +5,10 @@ style classes that overlay the Stripe PHP API classes.
 
 ## Install
 
-Either `composer install davidjeddy/stripe-command-bus-interface`
-Or add `"davidjeddy/stripe-command-bus-interface": "*",` to your projects composer.json in the `required` sections, the
-run `composer install`.
+Either
+ - `composer install davidjeddy/stripe-command-bus-interface`
+ - or add `"davidjeddy/stripe-command-bus-interface": "*",` to your projects composer.json in the `required` sections,
+    -[THEN](https://www.youtube.com/channel/UCPSfjD7o1CQZXzdAy56c8kg) run `composer install`.
 
 ## Usage
 

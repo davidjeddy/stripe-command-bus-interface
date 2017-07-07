@@ -1,0 +1,37 @@
+{
+  "name": "davidjeddy/stripe-command-bus-interface",
+  "description": "Stripe Command Bus Interface",
+  "keywords": [
+    "stripe",
+    "command bus"
+  ],
+  "homepage": "https://github.com/davidjeddy/stripe-command-bus-interface#readme",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "David J Eddy",
+      "email": "me@davidjeddy.com",
+      "homepage": "http://www.davidjeddy.com",
+      "role": "Creator"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/davidjeddy/stripe-command-bus-interface/issues",
+    "source": "https://github.com/davidjeddy/stripe-command-bus-interface"
+  },
+  "require": {
+    "php":              "^7",
+    "stripe/stripe-php":"^5"
+  },
+  "require-dev": {
+    "codeception/codeception":  "^2.0",
+    "codeception/specify":      "^0.4.3",
+    "codeception/verify":       "^0.3.0",
+  },
+  "autoload": {
+    "psr-4": {
+      "dje\\": "src"
+    }
+  }
+}

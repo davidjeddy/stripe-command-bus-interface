@@ -23,7 +23,7 @@ $response = \Yii::$app->commandBus->handle(
         # the Stripe data is passed to the command bus handlers as the `data` property
         'data' => [
             'description'   => $companyMDL->name,
-            'email'         => \Yii::$app->user->getIdentity()->email,
+            'email'         => \Yii::$app->user->getIdentity()->emil,
             'source'        => $billingDetailsMDL->getAttributes()
         ]
     ])

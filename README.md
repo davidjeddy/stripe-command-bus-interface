@@ -12,9 +12,14 @@ Either
 
 ## Usage
 
+ 1) Copy .env.dist as .env in the root of project
+ 2) Add Stripe public and private key to .env per [vlucas/phpdotenv](https://github.com/vlucas/phpdotenv) usage.
+ 3) Implement command bus logic:
+
 ```
 # basic command bus invocation
-$response = \Yii::$app->commandBus->handle(
+$commandBus = new \
+$response = $commandBus->handle(
     # the Stripe Command Bus core class. All requests pass through this class.
     new \dje\StripeCB\Customer\Create([
         # the Stripe data is passed to the command bus handlers as the `data` property

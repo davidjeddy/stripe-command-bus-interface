@@ -31,6 +31,10 @@ class Core extends Object implements SelfHandlingCommand
      */
     public function handle($command)
     {
-        throw new \Exception('Do not use \StripeCore->handle() directly.');
+        if (!$command instanceof \dje\StripeCB\Core) {
+            throw new \Exception(__CLASS__ . 'handle($command) parameter must be extended from \dje\StripeCB\Core.');
+        }
+
+        return $command;
     }
 }

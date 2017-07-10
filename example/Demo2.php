@@ -41,8 +41,9 @@ $handlerMiddleware = new League\Tactician\Handler\CommandHandlerMiddleware(
 $commandBus = new \League\Tactician\CommandBus([$handlerMiddleware]);
 
 // Controller Code ////////////////////////////////////////////////////////////
-$command = new RegisterUserCommand([
-    'emailAddress'  => 'alice@example.com',
-    'password'      => 'secret'
+$command = new \dje\StripeCB\Customer\View([
+    'data' => [
+        'customer_token' => 'cux_1234Asdf'
+    ]
 ]);
 $commandBus->handle($command);

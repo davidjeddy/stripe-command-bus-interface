@@ -10,13 +10,7 @@ use dje\StripeCB\CoreHandler;
 class CreateHandler extends CoreHandler
 {
     /**
-     * @var string
-     */
-    public $currency = 'usd';
-
-    /**
-     * Command init
-     * Set the keys to obj->prop
+     *
      */
     public function init()
     {
@@ -25,19 +19,14 @@ class CreateHandler extends CoreHandler
 
     /**
      * @param $command
-     * @return bool|\Exception|\Stripe\Charge|\Stripe\Error\ApiConnection|\Stripe\Error\Authentication|\Stripe\Error\Card|\Stripe\Error\InvalidRequest|\Stripe\Error\RateLimit
-     * @throws \Exception
+     * @return string|\Stripe\Charge
      */
     public function handle($command)
     {
-        if (!$command instanceof \dje\StripeCB\CoreHandler) {
-            throw new \Exception(__CLASS__ . 'handle() parameter must be of type \dje\StripeCB\StripeCore.');
-        }
-
         $returnData = false;
 
         try {
-            $returnData = \Stripe\Charge::create([
+            return \Stripe\Charge::create([
                 'amount'    => $command->data['amount'],
                 'description' => (isset($command->data['desc']) ? $command->data['desc'] : 'Test Charge'),
                 'currency'  => null !== env('STRIPE_CURRENCY') ? env('STRIPE_CURRENCY') : $this->currency,
@@ -67,6 +56,6 @@ class CreateHandler extends CoreHandler
             // Something else happened, completely unrelated to Stripe
         }
 
-        return $returnData;
+        return $returnData->getMessage();
     }
 }

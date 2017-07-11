@@ -24,13 +24,11 @@ class GetHandler extends CoreHandler
      */
     public function handle($command)
     {
-        return $command->data['customer_token'];
+        try {
+            return \Stripe\Customer::retrieve($command->data['customer_token']);
 
-//        try {
-//            return \Stripe\Customer::retrieve($command->data['customer_token']);
-//
-//        } catch (\Exception $e) {
-//            throw new \Exception($e->getMessage());
-//        }
+        } catch (\Exception $e) {
+            throw new \Exception($e->getMessage());
+        }
     }
 }

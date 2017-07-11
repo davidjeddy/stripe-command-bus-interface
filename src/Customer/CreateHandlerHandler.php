@@ -26,7 +26,7 @@ class CreateHandler extends CoreHandler
     public function handle($command)
     {
         try {
-            return \Stripe\Customer::create($this->data);
+            return \Stripe\Customer::create($command->data);
 
         } catch (\Exception $e) {
             throw new \Exception($e->getMessage());

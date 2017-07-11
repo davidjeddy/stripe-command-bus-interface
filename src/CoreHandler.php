@@ -25,8 +25,7 @@ class CoreHandler extends Object implements SelfHandlingCommand
 
     /**
      * @param $command
-     * @return string
-     * @throws \Exception
+     * @return mixed
      */
     public function handle($command)
     {

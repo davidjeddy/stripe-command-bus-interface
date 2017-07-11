@@ -1,8 +1,2 @@
-# Created by .ignore support plugin (hsz.mobi)
-.idea
-*.iml
-out
-gen
 .DS_Store
-.env
 vendor

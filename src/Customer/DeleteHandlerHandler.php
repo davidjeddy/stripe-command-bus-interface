@@ -3,12 +3,11 @@
 namespace dje\StripeCB\Customer;
 
 use dje\StripeCB\CoreHandler;
-use dje\bus\interfaces\SelfHandlingCommand;
 
 /**
  * @author David J Eddy <me@davidjeddy.com>
  */
-class DeleteHandler extends CoreHandler implements SelfHandlingCommand
+class DeleteHandler extends CoreHandler
 {
     /**
      *

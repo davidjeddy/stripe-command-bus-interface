@@ -1,5 +1,12 @@
 # Stripe Command Bus Interface
 
+## Status / Version
+
+EARLY ALPHA! I had a need so created a solution.
+(See [SemVer](http://semver.org/) for an explanation of version numbering.)
+
+## Description
+
 A limited selection of [command bus](https://www.sitepoint.com/command-buses-demystified-a-look-at-the-tactician-package/)
 style classes that overlay the Stripe PHP API classes.
 

@@ -7,7 +7,7 @@ use dje\StripeCB\Core;
 /**
  * @author David J Eddy <me@davidjeddy.com>
  */
-class View extends Core
+class Get extends Core
 {
     /**
      *
@@ -24,12 +24,11 @@ class View extends Core
      */
     public function handle($command)
     {
-        if (!$command instanceof \dje\StripeCB\Core) {
-            throw new \Exception(__CLASS__ . 'handle() parameter must be of type \dje\StripeCB\StripeCore.');
+        try {
+            return \Stripe\Customer::retrieve($command->data['customer_token']);
+
+        } catch (\Exception $e) {
+            throw new \Exception($e->getMessage());
         }
-
-        $response = \Stripe\Customer::retrieve($command->data['customer_token']);
-
-        return $response;
     }
 }

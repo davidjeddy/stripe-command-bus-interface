@@ -5,7 +5,7 @@ docker run -it -v $(pwd):/scbi php:7.0-cli bash
 ###### Update and add tools to container
 
 apt-get update -y && \
-apt-get install -y wget vim unzip zip && \
+apt-get install -y git wget vim unzip zip && \
 cd ./scbi && \
 wget https://getcomposer.org/composer.phar
 

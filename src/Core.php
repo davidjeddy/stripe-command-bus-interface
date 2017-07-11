@@ -2,8 +2,8 @@
 
 namespace dje\StripeCB;
 
-use dje\base\Object;
-use dje\bus\interfaces\SelfHandlingCommand;
+use dje\StripeCB\base\Object;
+use dje\StripeCB\bus\interfaces\SelfHandlingCommand;
 
 /**
  * @author David J Eddy <me@davidjeddy.com>

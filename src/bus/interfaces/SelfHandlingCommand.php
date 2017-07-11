@@ -1,6 +1,6 @@
 <?php
 
-namespace dje\bus\interfaces;
+namespace dje\StripeCB\bus\interfaces;
 
 /**
  * Interface SelfHandlingCommand

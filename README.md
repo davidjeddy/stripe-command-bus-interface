@@ -17,16 +17,14 @@ Either
  3) Implement command bus logic:
 
 ```
-# basic command bus invocation
-$commandBus = new \
+# basic command bus class to handler
 $response = $commandBus->handle(
     # the Stripe Command Bus core class. All requests pass through this class.
-    new \dje\StripeCB\Customer\Create([
+    new \dje\StripeCB\Customer\CreateHandler([
         # the Stripe data is passed to the command bus handlers as the `data` property
         'data' => [
-            'description'   => $companyMDL->name,
-            'email'         => \Yii::$app->user->getIdentity()->emil,
-            'source'        => $billingDetailsMDL->getAttributes()
+            'description'   => 'Test Co. LLC',
+            'email'         => 'test@email.com',
         ]
     ])
 );
@@ -34,3 +32,10 @@ $response = $commandBus->handle(
 
  - `$response` is passed from the Stripe class response back to you,
  - When mapping information for a Stripe class, it will always be contained within the 'data' array key
+
+## Demo
+
+ - Properly install and configure package dependencies (.env, stripe-php)
+ - Copy ./example/CustomerExampleController.php to your applications ./console/controller directory
+ - execution `php ./console/yii customer-example/create-customer`
+ - Observe results.

@@ -2,8 +2,8 @@
 
 namespace dje\StripeCB;
 
-use dje\StripeCB\base\Object;
-use dje\StripeCB\bus\interfaces\SelfHandlingCommand;
+use yii\base\Object;
+use trntv\bus\interfaces\SelfHandlingCommand;
 
 /**
  * @author David J Eddy <me@davidjeddy.com>

@@ -16,11 +16,6 @@ class CreateHandler extends CoreHandler
     public function init()
     {
         parent::init();
-
-        // sane defaults
-        if (!isset($this->data['source']['object'])) {
-            $this->data['source']['object'] = 'card';
-        }
     }
 
     /**

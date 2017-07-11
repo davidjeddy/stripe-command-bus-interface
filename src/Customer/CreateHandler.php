@@ -2,12 +2,12 @@
 
 namespace common\commands\Stripe\Customer;
 
-use common\commands\Stripe\Core;
+use common\commands\Stripe\CoreHandler;
 
 /**
  * @author David J Eddy <me@davidjeddy.com>
  */
-class Delete extends Core
+class Create extends CoreHandler
 {
     /**
      *
@@ -25,8 +25,7 @@ class Delete extends Core
     public function handle($command)
     {
         try {
-            $stripeCustomer = \Stripe\Customer::retrieve($command->data['customer_token']);
-            return $stripeCustomer->delete();
+            return \Stripe\Customer::create($this->data);
 
         } catch (\Exception $e) {
             throw new \Exception($e->getMessage());

@@ -2,12 +2,12 @@
 
 namespace dje\StripeCB\Charge;
 
-use dje\StripeCB\Core;
+use dje\StripeCB\CoreHandler;
 
 /**
  * @author David J Eddy <me@davidjeddy.com>
  */
-class Create extends Core
+class CreateHandler extends CoreHandler
 {
     /**
      * @var string
@@ -30,7 +30,7 @@ class Create extends Core
      */
     public function handle($command)
     {
-        if (!$command instanceof \dje\StripeCB\Core) {
+        if (!$command instanceof \dje\StripeCB\CoreHandler) {
             throw new \Exception(__CLASS__ . 'handle() parameter must be of type \dje\StripeCB\StripeCore.');
         }
 

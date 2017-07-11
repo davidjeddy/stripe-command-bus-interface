@@ -8,7 +8,7 @@ use dje\StripeCB\bus\interfaces\SelfHandlingCommand;
 /**
  * @author David J Eddy <me@davidjeddy.com>
  */
-class Core extends Object implements SelfHandlingCommand
+class CoreHandler extends Object implements SelfHandlingCommand
 {
     /**
      * @var null
@@ -16,12 +16,11 @@ class Core extends Object implements SelfHandlingCommand
     public $data = null;
 
     /**
-     * Command init
-     * Set the keys to obj->prop
+     * Load Stripe private key from .env
      */
     public function init()
     {
-        \Stripe\Stripe::setApiKey(env('STRIPE_PRV_KEY'));
+        \Stripe\Stripe::setApiKey(getenv('STRIPE_PRV_KEY'));
     }
 
     /**
@@ -31,10 +30,6 @@ class Core extends Object implements SelfHandlingCommand
      */
     public function handle($command)
     {
-        if (!$command instanceof \dje\StripeCB\Core) {
-            throw new \Exception(__CLASS__ . 'handle($command) parameter must be extended from \dje\StripeCB\Core.');
-        }
-
         return $command;
     }
 }

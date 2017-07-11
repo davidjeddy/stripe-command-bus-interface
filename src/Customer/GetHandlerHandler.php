@@ -2,12 +2,12 @@
 
 namespace dje\StripeCB\Customer;
 
-use dje\StripeCB\Core;
+use dje\StripeCB\CoreHandler;
 
 /**
  * @author David J Eddy <me@davidjeddy.com>
  */
-class Get extends Core
+class GetHandler extends CoreHandler
 {
     /**
      *
@@ -24,11 +24,13 @@ class Get extends Core
      */
     public function handle($command)
     {
-        try {
-            return \Stripe\Customer::retrieve($command->data['customer_token']);
+        return $command->data['customer_token'];
 
-        } catch (\Exception $e) {
-            throw new \Exception($e->getMessage());
-        }
+//        try {
+//            return \Stripe\Customer::retrieve($command->data['customer_token']);
+//
+//        } catch (\Exception $e) {
+//            throw new \Exception($e->getMessage());
+//        }
     }
 }

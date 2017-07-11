@@ -2,13 +2,13 @@
 
 namespace dje\StripeCB\Customer;
 
-use dje\StripeCB\Core;
-use Stripe\Stripe;
+use dje\StripeCB\CoreHandler;
+use dje\bus\interfaces\SelfHandlingCommand;
 
 /**
  * @author David J Eddy <me@davidjeddy.com>
  */
-class Create extends Core
+class DeleteHandler extends CoreHandler implements SelfHandlingCommand
 {
     /**
      *
@@ -16,11 +16,6 @@ class Create extends Core
     public function init()
     {
         parent::init();
-
-        // sane defaults
-        if (!isset($this->data['source']['object'])) {
-            $this->data['source']['object'] = 'card';
-        }
     }
 
     /**
@@ -31,7 +26,9 @@ class Create extends Core
     public function handle($command)
     {
         try {
-            return \Stripe\Customer::create($this->data);
+            $stripeCustomer = \Stripe\Customer::retrieve($command->data['customer_token']);
+            $stripeCustomer->delete();
+            return $stripeCustomer;
 
         } catch (\Exception $e) {
             throw new \Exception($e->getMessage());

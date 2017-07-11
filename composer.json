@@ -21,8 +21,9 @@
     "source": "https://github.com/davidjeddy/stripe-command-bus-interface"
   },
   "require": {
-    "php":              "^7",
-    "stripe/stripe-php":"^5"
+    "php":                    "^7",
+    "stripe/stripe-php":      "^5",
+    "trntv/yii2-command-bus": "^2"
   },
   "require-dev": {
     "codeception/codeception":  "^2.0",

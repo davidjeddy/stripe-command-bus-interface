@@ -2,12 +2,12 @@
 
 namespace common\commands\Stripe\Charge;
 
-use common\commands\Stripe\Core;
+use common\commands\Stripe\CoreHandler;
 
 /**
  * @author David J Eddy <me@davidjeddy.com>
  */
-class Create extends Core
+class Create extends CoreHandler
 {
     /**
      * @var string

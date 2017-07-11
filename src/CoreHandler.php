@@ -8,7 +8,7 @@ use trntv\bus\interfaces\SelfHandlingCommand;
 /**
  * @author David J Eddy <me@davidjeddy.com>
  */
-class Core extends Object implements SelfHandlingCommand
+class CoreHandler extends Object implements SelfHandlingCommand
 {
     /**
      * @var string

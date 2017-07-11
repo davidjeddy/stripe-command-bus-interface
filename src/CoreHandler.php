@@ -1,6 +1,6 @@
 <?php
 
-namespace dje\StripeCB;
+namespace common\commands\Stripe;
 
 use yii\base\Object;
 use trntv\bus\interfaces\SelfHandlingCommand;
@@ -11,16 +11,32 @@ use trntv\bus\interfaces\SelfHandlingCommand;
 class CoreHandler extends Object implements SelfHandlingCommand
 {
     /**
-     * @var null
+     * @var string
+     */
+    public $noun = '';
+
+    /**
+     * @var string
+     */
+    public $verb = 'create';
+
+    /**
+     * @var mixed
      */
     public $data = null;
 
     /**
-     * Load Stripe private key from .env
+     * @var string
+     */
+    protected $privateKey;
+
+    /**
+     * Command init
+     * Set the keys to obj->prop
      */
     public function init()
     {
-        \Stripe\Stripe::setApiKey(getenv('STRIPE_PRV_KEY'));
+        \Stripe\Stripe::setApiKey(env('STRIPE_PRV_KEY'));
     }
 
     /**
@@ -30,6 +46,17 @@ class CoreHandler extends Object implements SelfHandlingCommand
      */
     public function handle($command)
     {
-        return $command;
+        if (!$this->noun ||!$this->verb) {
+            throw new \Exception('Please provide noun target and verb action in command bus parameters array.');
+        }
+
+        try {
+            $class = '\common\commands\Stripe\\' . ucfirst($this->noun). '\\' . ucfirst($this->verb);
+            $class = new $class;
+
+            return $class->handle($command);
+        } catch (\Exception $e) {
+            return $e->getMessage();
+        }
     }
 }

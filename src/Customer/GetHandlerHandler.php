@@ -2,21 +2,13 @@
 
 namespace davidjeddy\StripeCB\Customer;
 
-use dje\StripeCB\CoreHandler;
+use davidjeddy\StripeCB\CoreHandler;
 
 /**
  * @author David J Eddy <me@davidjeddy.com>
  */
 class GetHandler extends CoreHandler
 {
-    /**
-     *
-     */
-    public function init()
-    {
-        parent::init();
-    }
-
     /**
      * @param $command
      * @return \Stripe\Customer

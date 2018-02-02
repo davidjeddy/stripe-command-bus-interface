@@ -1,6 +1,6 @@
 <?php
 
-namespace dje\StripeCB;
+namespace davidjeddy\StripeCB;
 
 use yii\base\Object;
 use trntv\bus\interfaces\SelfHandlingCommand;

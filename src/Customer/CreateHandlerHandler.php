@@ -1,6 +1,6 @@
 <?php
 
-namespace dje\StripeCB\Customer;
+namespace davidjeddy\StripeCB\Customer;
 
 use dje\StripeCB\CoreHandler;
 use Stripe\Stripe;

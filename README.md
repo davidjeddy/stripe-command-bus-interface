@@ -9,6 +9,7 @@
 [![Monthly Downloads](https://poser.pugx.org/davidjeddy/stripe-command-bus-interface/d/monthly?format=flat-square)](https://packagist.org/packages/davidjeddy/stripe-command-bus-interface)
 [![Daily Downloads](https://poser.pugx.org/davidjeddy/stripe-command-bus-interface/d/daily?format=flat-square)](https://packagist.org/packages/davidjeddy/stripe-command-bus-interface)
 [![composer.lock](https://poser.pugx.org/davidjeddy/stripe-command-bus-interface/composerlock?format=flat-square)](https://packagist.org/packages/davidjeddy/stripe-command-bus-interface)
+[![codecov](https://codecov.io/gh/davidjeddy/stripe-command-bus-interface/branch/master/graph/badge.svg)](https://codecov.io/gh/davidjeddy/stripe-command-bus-interface)
 
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/1977432a-f69f-480d-a0cb-1f65627ba8f3/big.png)](https://insight.sensiolabs.com/projects/1977432a-f69f-480d-a0cb-1f65627ba8f3)
 

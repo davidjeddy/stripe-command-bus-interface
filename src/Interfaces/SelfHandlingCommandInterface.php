@@ -1,11 +1,9 @@
 <?php
 
-namespace davidjeddy\StripeCB\interfaces;
-
-use davidjeddy\StripeCB\HandlerInterface;
+namespace davidjeddy\StripeCB\Interfaces;
 
 /**
- * Interface SelfHandlingCommand
+ * Interface SelfHandlingCommandInterface
  *
  * @author Davidj J Eddy <me@davidjeddy.com>
  *

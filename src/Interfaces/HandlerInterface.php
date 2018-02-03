@@ -3,7 +3,7 @@
 namespace davidjeddy\StripeCB\interfaces;
 
 /**
- * Interface Handler
+ * Interface HandlerInterface
  *
  * @author Davidj J Eddy <me@davidjeddy.com>
  *

@@ -14,3 +14,9 @@ cache:
 before_script:
   - composer self-update
   - composer install --ansi --profile --prefer-dist --no-interaction -o -vvv
+
+script:
+    - vendor/bin/phpunit --coverage-clover=coverage.xml
+
+after_success:
+    - bash <(curl -s https://codecov.io/bash)

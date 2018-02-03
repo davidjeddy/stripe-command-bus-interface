@@ -16,6 +16,10 @@
 EARLY ALPHA! I had a need so created a solution.
 (See [SemVer](http://semver.org/) for an explanation of version numbering.)
 
+## Credit
+
+Could not do this without the work of [Eugene Terentev](https://github.com/trntv).
+
 ## Description
 
 A limited selection of [command bus](https://www.sitepoint.com/command-buses-demystified-a-look-at-the-tactician-package/)
@@ -31,8 +35,7 @@ Either
 ## Usage
 
  1) Copy .env.dist as .env in the root of project
- 2) Add Stripe public and private key to .env per [vlucas/phpdotenv](https://github.com/vlucas/phpdotenv) usage.
- 3) Implement command bus logic:
+ 2) Implement command bus logic:
 
 ```
 # basic command bus class to handler
@@ -53,7 +56,7 @@ $response = $commandBus->handle(
 
 ## Demo
 
- - Properly install and configure package dependencies (.env, stripe-php)
+ - Properly install and configure package dependencies
  - Copy ./example/CustomerExampleController.php to your applications ./console/controller directory
  - execution `php ./console/yii customer-example/create-customer`
  - Observe results.

@@ -2,6 +2,8 @@
 
 namespace davidjeddy\StripeCB;
 
+use davidjeddy\StripeCB\SelfHandlingCommand;
+
 /**
  * @author David J Eddy <me@davidjeddy.com>
  */

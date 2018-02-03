@@ -2,7 +2,7 @@
 
 namespace davidjeddy\StripeCB\Interfaces;
 
-use davidjeddy\StripeCB\Interfaces\HandlerInterface;
+use dje\StripeCB\Interfaces\HandlerInterface;
 
 /**
  * Interface SelfHandlingCommandInterface

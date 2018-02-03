@@ -2,7 +2,7 @@
 
 namespace davidjeddy\StripeCB;
 
-use davidjeddy\StripeCB\Interfaces\SelfHandlingCommandInterface;
+use dje\StripeCB\Interfaces\SelfHandlingCommandInterface;
 use Stripe\Stripe;
 
 /**

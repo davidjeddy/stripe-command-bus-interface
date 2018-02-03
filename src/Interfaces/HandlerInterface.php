@@ -1,6 +1,6 @@
 <?php
 
-namespace davidjeddy\StripeCB\interfaces;
+namespace davidjeddy\StripeCB\Interfaces;
 
 /**
  * Interface HandlerInterface

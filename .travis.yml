@@ -1,11 +1,17 @@
+# Required to run your project under the correct environment.
 language: php
+
+# Versions of PHP you want your project run with.
 php:
-  - '7.1'
-  - hhvm # on Trusty only
-  - nightly
+  - 7.0
+  - 7.1
 
-before_install:
-  - sudo apt-get update > /dev/null
+# Dependencies cache for faster builds
+cache:
+  directories:
+    - $HOME/.composer/cache
 
-install:
-  - composer install --ansi --profile --prefer-dist -o -vvv
+# Commands to be run before your environment runs.
+before_script:
+  - composer self-update
+  - composer install --ansi --profile --prefer-dist --no-interaction -o -vvv

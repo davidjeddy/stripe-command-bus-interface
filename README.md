@@ -13,7 +13,7 @@
 
 ## Status / Version
 
-EARLY ALPHA! I had a need so created a solution.
+EARLY ALPHA! I had a need so I created a solution.
 (See [SemVer](http://semver.org/) for an explanation of version numbering.)
 
 ## Credit
@@ -33,15 +33,15 @@ Either
     -[THEN](https://www.youtube.com/channel/UCPSfjD7o1CQZXzdAy56c8kg) run `composer install`.
 
 ## Usage
+1) Add the desired classes to your application classes `use` statements.
 
- 1) Copy .env.dist as .env in the root of project
- 2) Implement command bus logic:
+2) Implement command bus logic in the class:
 
-```
+```PHP
 # basic command bus class to handler
 $response = $commandBus->handle(
     # the Stripe Command Bus core class. All requests pass through this class.
-    new \dje\StripeCB\Customer\CreateHandler([
+    new CreateHandler([
         # the Stripe data is passed to the command bus handlers as the `data` property
         'data' => [
             'description'   => 'Test Co. LLC',
@@ -51,12 +51,5 @@ $response = $commandBus->handle(
 );
 ```
 
- - `$response` is passed from the Stripe class response back to you,
- - When mapping information for a Stripe class, it will always be contained within the 'data' array key
-
-## Demo
-
- - Properly install and configure package dependencies
- - Copy ./example/CustomerExampleController.php to your applications ./console/controller directory
- - execution `php ./console/yii customer-example/create-customer`
- - Observe results.
+ - `$response` is passed from the Stripe class response back to your application.
+ - When mapping information for a Stripe class, it will always be contained within the 'data' array key.

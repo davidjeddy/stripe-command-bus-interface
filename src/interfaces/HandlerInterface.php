@@ -8,7 +8,7 @@ namespace davidjeddy\StripeCB\interfaces;
  * @author Davidj J Eddy <me@davidjeddy.com>
  *
  */
-interface Handler
+interface HandlerInterface
 {
     /**
      * @param $command

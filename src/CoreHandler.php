@@ -2,12 +2,12 @@
 
 namespace davidjeddy\StripeCB;
 
-use davidjeddy\StripeCB\SelfHandlingCommand;
+use davidjeddy\StripeCB\SelfHandlingCommandInterface;
 
 /**
  * @author David J Eddy <me@davidjeddy.com>
  */
-class CoreHandler implements SelfHandlingCommand
+class CoreHandler implements SelfHandlingCommandInterface
 {
     /**
      * @var null

@@ -2,13 +2,12 @@
 
 namespace davidjeddy\StripeCB;
 
-use davidjeddy\StripeCB\Interfaces\SelfHandlingCommandInterface;
-use Stripe\Stripe;
+use davidjeddy\StripeCB\Interfaces\HandlerInterface;
 
 /**
  * @author David J Eddy <me@davidjeddy.com>
  */
-class CoreHandler implements SelfHandlingCommandInterface
+class CoreHandler implements HandlerInterface
 {
     /**
      * @var null
@@ -21,7 +20,7 @@ class CoreHandler implements SelfHandlingCommandInterface
      * @param \Stripe\Stripe $stripe
      * @param string $stripe_private_key
      */
-    public function init(Stripe $stripe, string $stripe_private_key)
+    public function init(\Stripe\Stripe $stripe, string $stripe_private_key)
     {
         $stripe::setApiKey($stripe_private_key);
     }

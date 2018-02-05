@@ -7,7 +7,7 @@ use davidjeddy\StripeCB\Interfaces\HandlerInterface;
 /**
  * Interface SelfHandlingCommandInterface
  *
- * @author Davidj J Eddy <me@davidjeddy.com>
+ * @author David J Eddy <me@davidjeddy.com>
  *
  */
 interface SelfHandlingCommandInterface extends HandlerInterface

@@ -5,7 +5,7 @@ namespace davidjeddy\StripeCB\Interfaces;
 /**
  * Interface HandlerInterface
  *
- * @author Davidj J Eddy <me@davidjeddy.com>
+ * @author David J Eddy <me@davidjeddy.com>
  *
  */
 interface HandlerInterface

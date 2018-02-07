@@ -1,14 +1,13 @@
 <?php
 
-namespace dje\StripeCB;
+namespace davidjeddy\StripeCB;
 
-use yii\base\Object;
-use trntv\bus\interfaces\SelfHandlingCommand;
+use davidjeddy\StripeCB\Interfaces\HandlerInterface;
 
 /**
  * @author David J Eddy <me@davidjeddy.com>
  */
-class CoreHandler extends Object implements SelfHandlingCommand
+class CoreHandler implements HandlerInterface
 {
     /**
      * @var null
@@ -17,10 +16,13 @@ class CoreHandler extends Object implements SelfHandlingCommand
 
     /**
      * Load Stripe private key from .env
+     *
+     * @param \Stripe\Stripe $stripe
+     * @param string $stripe_private_key
      */
-    public function init()
+    public function init(\Stripe\Stripe $stripe, string $stripe_private_key)
     {
-        \Stripe\Stripe::setApiKey(getenv('STRIPE_PRV_KEY'));
+        $stripe::setApiKey($stripe_private_key);
     }
 
     /**

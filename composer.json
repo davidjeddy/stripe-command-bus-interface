@@ -21,14 +21,14 @@
     "source": "https://github.com/davidjeddy/stripe-command-bus-interface"
   },
   "require": {
-    "php":              "^7",
-    "stripe/stripe-php":"^4",
-    "vlucas/phpdotenv": "^2.4"
+    "php": "^7",
+    "stripe/stripe-php": "^4"
   },
   "require-dev": {
-    "codeception/codeception":  "^2.0",
-    "codeception/specify":      "^0.4.3",
-    "codeception/verify":       "^0.3.0"
+    "codeception/codeception": "^2.0",
+    "codeception/specify": "^0.4.3",
+    "codeception/verify": "^0.3.0",
+    "phpunit/phpunit": "^6.5"
   },
   "autoload": {
     "psr-4": {

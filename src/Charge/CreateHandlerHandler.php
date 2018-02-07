@@ -1,6 +1,6 @@
 <?php
 
-namespace dje\StripeCB\Charge;
+namespace davidjeddy\StripeCB\Charge;
 
 use dje\StripeCB\CoreHandler;
 

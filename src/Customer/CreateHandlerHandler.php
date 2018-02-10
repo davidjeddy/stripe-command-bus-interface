@@ -2,7 +2,7 @@
 
 namespace davidjeddy\StripeCB\Customer;
 
-use davidjeddy\StripeCB\CoreHandler;
+use dje\StripeCB\CoreHandler;
 
 /**
  * @author David J Eddy <me@davidjeddy.com>

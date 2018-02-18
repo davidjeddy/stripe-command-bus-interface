@@ -7,7 +7,7 @@ use dje\StripeCB\CoreHandler;
 /**
  * @author David J Eddy <me@davidjeddy.com>
  */
-class CreateHandler extends CoreHandler
+class Create extends CoreHandler
 {
     /**
      * @param $command

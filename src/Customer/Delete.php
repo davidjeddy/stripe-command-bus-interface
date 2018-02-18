@@ -7,7 +7,7 @@ use dje\StripeCB\CoreHandler;
 /**
  * @author David J Eddy <me@davidjeddy.com>
  */
-class DeleteHandler extends CoreHandler
+class Delete extends CoreHandler
 {
     /**
      * @param $command

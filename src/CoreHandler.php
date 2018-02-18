@@ -1,13 +1,16 @@
 <?php
+declare(strict_types=1);
 
-namespace davidjeddy\StripeCB;
+# Namespace
+namespace dje\StripeCB;
 
-use davidjeddy\StripeCB\Interfaces\HandlerInterface;
+# Use
+use Stripe\Stripe;
 
 /**
  * @author David J Eddy <me@davidjeddy.com>
  */
-class CoreHandler implements HandlerInterface
+class CoreHandler
 {
     /**
      * @var null
@@ -20,7 +23,7 @@ class CoreHandler implements HandlerInterface
      * @param \Stripe\Stripe $stripe
      * @param string $stripe_private_key
      */
-    public function init(\Stripe\Stripe $stripe, string $stripe_private_key)
+    public function init(Stripe $stripe, string $stripe_private_key)
     {
         $stripe::setApiKey($stripe_private_key);
     }

@@ -8,7 +8,7 @@ use Stripe\Stripe;
 /**
  * @author David J Eddy <me@davidjeddy.com>
  */
-class CreateHandler extends CoreHandler
+class Create extends CoreHandler
 {
     /**
      * @param \Stripe\Stripe $stripe

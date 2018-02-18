@@ -1,6 +1,6 @@
 <?php
 
-namespace davidjeddy\StripeCB\Customer;
+namespace dje\StripeCB\Customer;
 
 use dje\StripeCB\CoreHandler;
 

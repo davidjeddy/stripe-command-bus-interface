@@ -1,8 +1,9 @@
 <?php
 
-namespace davidjeddy\StripeCB\Charge;
+namespace dje\StripeCB\Charge;
 
 use dje\StripeCB\CoreHandler;
+use Stripe\Stripe;
 
 /**
  * @author David J Eddy <me@davidjeddy.com>
@@ -10,11 +11,12 @@ use dje\StripeCB\CoreHandler;
 class CreateHandler extends CoreHandler
 {
     /**
-     *
+     * @param \Stripe\Stripe $stripe
+     * @param string $stripe_private_key
      */
-    public function init()
+    public function init(Stripe $stripe, string $stripe_private_key)
     {
-        parent::init();
+        parent::init($stripe, $stripe_private_key);
     }
 
     /**

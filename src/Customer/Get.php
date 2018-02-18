@@ -1,25 +1,24 @@
 <?php
 
-namespace davidjeddy\StripeCB\Customer;
+namespace dje\StripeCB\Customer;
 
 use dje\StripeCB\CoreHandler;
+use \Stripe\Customer;
 
 /**
  * @author David J Eddy <me@davidjeddy.com>
  */
-class DeleteHandler extends CoreHandler
+class GetHandler extends CoreHandler
 {
     /**
      * @param $command
-     * @return \Stripe\Customer
+     * @return mixed|Customer
      * @throws \Exception
      */
     public function handle($command)
     {
         try {
-            $stripeCustomer = \Stripe\Customer::retrieve($command->data['customer_token']);
-            $stripeCustomer->delete();
-            return $stripeCustomer;
+            return Customer::retrieve($command->data['customer_token']);
 
         } catch (\Exception $e) {
             throw new \Exception($e->getMessage());

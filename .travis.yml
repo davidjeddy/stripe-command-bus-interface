@@ -1,0 +1,22 @@
+# Required to run your project under the correct environment.
+language: php
+
+# Versions of PHP you want your project run with.
+php:
+  - 7.1
+
+# Dependencies cache for faster builds
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+# Commands to be run before your environment runs.
+before_script:
+  - composer self-update
+  - composer install --ansi --profile --prefer-dist --no-interaction -o -vvv
+
+script:
+    - vendor/bin/phpunit --coverage-clover=coverage.xml
+
+after_success:
+    - bash <(curl -s https://codecov.io/bash)

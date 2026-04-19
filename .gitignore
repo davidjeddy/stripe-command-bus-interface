@@ -1,0 +1,6 @@
+# files
+*.phar
+
+# dirs
+vendor/
+
